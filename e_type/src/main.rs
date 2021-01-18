@@ -21,6 +21,18 @@ fn main() {
     for i in &arr{
         println!("i  = {}",i);
     }
-    
+    //元组
+    let tup:(i32,f32,char)=(-3,1.2,'好');
+    println!("{}",tup.0);
+    println!("{}",tup.1);
+    println!("{}",tup.2);
+
+    //元组拆解
+    let (x,y,z) = tup;
+    println!("{}",x);
+    println!("{}",y);
+    println!("{}",z);
+
+
     println!("Hello, world!");
 }
