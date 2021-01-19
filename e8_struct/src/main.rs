@@ -51,6 +51,6 @@ fn main() {
     struct A{};
 
     //打印结构体#[derive(Debug)]
-    print!("xioaming = {:?}",xiaoming);
-    print!("xioaming = {:#?}",xiaoming);
+    println!("xioaming = {:?}",xiaoming);
+    println!("xioaming = {:#?}",xiaoming);
 }
