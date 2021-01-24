@@ -2,14 +2,13 @@
 fn main() {
     let mut v:Vec<i32> = Vec::new();
     v.push(1);
-    println!("Hello, world!");
     
     let v1 = vec![1,2,3];
     
     //下标获取
     let one:&i32 = &v1[0];
     println!("one = {}",*one);
-    //match操作(推荐)
+    //match操作(推荐 不会越界)
     match v1.get(1){
         Some(value) => println!("value={}",value),
         _=>println!("None")
