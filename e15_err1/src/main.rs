@@ -12,7 +12,7 @@ fn main() {
     // let f = File::open("hello.txt");
     // let r = match f {
     //     Ok(file)=>file,
-    //     Err(error)=>panic!("err--- {}",error),
+    //     Err(error)=>panic!("err--- {:?}",error),
     // };
 
     //简写1
