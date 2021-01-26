@@ -1,6 +1,10 @@
 //当调用一个函数，函数可能会失败，除了在函数中处理错误外，还可以将错误传给调用者，让调用者决定如何处理，这叫传播错误
 //示例测试原型时候   panic/unwarp/expect
 //实际项目中用Result：
+//enmu Result<T,E>{
+//  Ok(T),
+//  Err(E),
+// }
 //Option 、Result  前者用于值为空时  或者用于 错误时
 use std::io;
 use std::io::Read;
@@ -13,13 +17,14 @@ fn main() {
     }
 }
 
+//连写方式 进一步简化
 fn read_username_from_file()->Result<String,io::Error>{
     let mut s = String::new();
     File::open("hello.txt")?.read_to_string(&mut s)?;
     Ok(s)
 }
 
-
+//简写，用？抛出err
 // fn read_username_from_file()->Result<String,io::Error>{
 //     let mut f = File::open("hello.txt")?;
 //     let mut s = String::new();
@@ -27,7 +32,7 @@ fn read_username_from_file()->Result<String,io::Error>{
 //     Ok(s)
 // }
 
-
+//最原始方式
 // fn read_username_from_file()->Result<String,io::Error>{
 //     let f = File::open("hello.txt");
 //     let mut f = match f {
