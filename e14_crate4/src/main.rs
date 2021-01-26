@@ -1,3 +1,4 @@
+//!!配置文件新增依赖rust-crypto = "0.2"
 extern crate crypto;
 use crypto::digest::Digest;
 use crypto::sha3::Sha3;
