@@ -23,7 +23,7 @@ mod modeA{
         pub mod modeC{
             pub fn printC(){
                println!("C");
-               super::printB(); 
+               super::printB(); //调用父模块！！
             }
         }
     }
