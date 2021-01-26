@@ -7,6 +7,7 @@ mod tests {
     fn it_works() {
         assert_eq!(2 + 2, 4);
     }
+    //使用 cargo test 命令测试
     #[test]
     fn use_cat(){
         assert_eq!(true,cat::is_cat());
